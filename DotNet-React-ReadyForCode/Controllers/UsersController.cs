@@ -22,7 +22,7 @@ namespace DotNet_React_ReadyForCode.Controllers
 
         // GET: api/SignUps
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SignUp>>> GetSignUp()
+        public async Task<ActionResult<IEnumerable<User>>> GetSignUp()
         {
           if (_context.SignUp == null)
           {
@@ -33,7 +33,7 @@ namespace DotNet_React_ReadyForCode.Controllers
 
         // GET: api/SignUps/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SignUp>> GetSignUp(int id)
+        public async Task<ActionResult<User>> GetSignUp(int id)
         {
           if (_context.SignUp == null)
           {
@@ -52,7 +52,7 @@ namespace DotNet_React_ReadyForCode.Controllers
         // PUT: api/SignUps/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSignUp(int id, SignUp signUp)
+        public async Task<IActionResult> PutSignUp(int id, User signUp)
         {
             if (id != signUp.Id)
             {
@@ -83,7 +83,7 @@ namespace DotNet_React_ReadyForCode.Controllers
         // POST: api/SignUps
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<SignUp>> PostSignUp(SignUp signUp)
+        public async Task<ActionResult<User>> PostSignUp(User signUp)
         {
           if (_context.SignUp == null)
           {

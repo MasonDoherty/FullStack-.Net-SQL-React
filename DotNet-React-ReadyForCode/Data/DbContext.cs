@@ -17,5 +17,12 @@ using DotNet_React_ReadyForCode.Models;
         optionsBuilder.UseSqlServer("YourConnectionStringGoesHere");
     }
 
-    public DbSet<DotNet_React_ReadyForCode.Models.SignUp> SignUp { get; set; } = default!;
-    }
+    public DbSet<DotNet_React_ReadyForCode.Models.User> SignUp { get; set; } = default!;
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.ToTable("SignUp");
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.FirstName).IsRequired();
+        }

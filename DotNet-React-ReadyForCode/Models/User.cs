@@ -1,6 +1,6 @@
 ﻿namespace DotNet_React_ReadyForCode.Models
 {
-    public class SignUp
+    public class User
     {public int Id { get; set;}
         public string FirstName { get; set;}
         public string LastName { get; set; }
