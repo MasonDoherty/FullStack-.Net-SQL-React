@@ -1,5 +1,5 @@
 #Get your project started easily with this repo. 
-just insert your connection string into DbContext and your set. 
+just insert your connection string into DbContext and your set and table name. 
 
 this is the .net using react set up however the components have been converted to funtional components.
 
